@@ -18,7 +18,7 @@
             <!-- Izquierda: Logo Clickeable -->
             <div class="header-left">
                 <a href="#" id="site-logo-btn">
-                    <img src="assets/logo.png" alt="The Chromatic Quest Logo" class="site-logo" data-fallback="assets/logo.PNG,assets/LOGO.png,assets/logo.jpg">
+                    <img src="assets/logo.png" alt="The Chromatic Quest Logo" class="site-logo">
                 </a>
             </div>
 
@@ -26,7 +26,7 @@
             <div class="header-center">
                 <div class="header-avatar-box">
                     <div class="avatar-glow"></div>
-                    <img src="assets/avatar.png" alt="Character Avatar" class="header-avatar" data-fallback="assets/avatar.PNG,assets/AVATAR.png,assets/avatar.jpg">
+                    <img src="assets/avatar.png" alt="Character Avatar" class="header-avatar">
                 </div>
             </div>
 
@@ -178,9 +178,9 @@
         <section id="contact-view" class="view-section">
             <div class="contact-card">
                 
-                <!-- Imagen logonave -->
+                <!-- Imagen logonave (PNG) -->
                 <div class="contact-image-box">
-                    <img src="assets/logonave.png" alt="Logo Nave" class="contact-nave-img" data-fallback="assets/logonave.jpg,assets/logonave.PNG">
+                    <img src="assets/logonave.png" alt="Logo Nave" class="contact-nave-img">
                 </div>
 
                 <h2 id="contact-title">CONTACTO & COMENTARIOS</h2>
@@ -237,26 +237,14 @@
 
     <!-- Scripts -->
     <script>
-        // Auto-corrector inteligente para extensiones (.png vs .jpg vs .PNG)
+        // Auto-corrector por si alguna extensión en el servidor está en mayúsculas (.JPG)
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function handleImageError() {
                 const currentSrc = this.src;
-                
-                // Si tiene lista de fallbacks en HTML
-                const fallbacks = this.dataset.fallback ? this.dataset.fallback.split(',') : [];
-                if (fallbacks.length > 0 && !this.dataset.fallbackTried) {
-                    this.dataset.fallbackTried = "true";
-                    this.src = fallbacks[0];
-                    return;
-                }
-
-                // Probar extensiones alternativas automáticamente
                 if (currentSrc.endsWith('.jpg')) {
-                    this.src = currentSrc.replace('.jpg', '.png');
+                    this.src = currentSrc.replace('.jpg', '.JPG');
                 } else if (currentSrc.endsWith('.png')) {
                     this.src = currentSrc.replace('.png', '.PNG');
-                } else if (currentSrc.endsWith('.PNG')) {
-                    this.src = currentSrc.replace('.PNG', '.jpeg');
                 }
             });
         });
