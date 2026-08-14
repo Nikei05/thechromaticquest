@@ -1,8 +1,8 @@
-/* Fuente personalizada con rendimiento optimizado */
+/* Fuente personalizada */
 @font-face {
     font-family: 'ChillChrip';
     src: url('assets/Chill-Chrip.otf') format('opentype');
-    font-display: swap; /* Muestra texto de inmediato mientras descarga la fuente */
+    font-display: swap;
 }
 
 /* Reset Global */
@@ -26,7 +26,6 @@ html, body {
 img {
     user-drag: none;
     -webkit-user-drag: none;
-    content-visibility: auto; /* Optimización moderna del motor gráfico */
 }
 
 /* Fondo Halftone / Overlay con resplandor Rojo-Naranja */
@@ -197,7 +196,6 @@ img {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    contain: content; /* Rendimiento mejorado de renderizado */
 }
 
 .feed-card:hover {
@@ -230,7 +228,7 @@ img {
     color: #ff4500;
 }
 
-/* CONTACTO */
+/* CONTACTO CON NAVE GIGANTE ORIGINAL */
 .contact-card {
     text-align: center;
     padding: 10px 40px 50px 40px;
@@ -242,38 +240,42 @@ img {
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
     overflow: hidden;
     position: relative;
-    z-index: 5;
 }
 
+/* Nave tamaño gigante original con margen negativo sobre el contenedor */
 .contact-image-box { 
     width: 100%; 
     max-width: 780px; 
     margin: -60px auto -180px auto; 
     display: flex; 
     justify-content: center; 
-    pointer-events: none !important; 
+    pointer-events: none !important; /* Permite clics a través de la nave hacia el input Nombre */
 }
 
-.contact-nave-img { width: 100%; height: auto; display: block; transform: scale(1.15); pointer-events: none !important; }
+.contact-nave-img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    transform: scale(1.15); 
+    pointer-events: none !important;
+}
 
-.contact-card h2 { font-size: 2.3rem; color: #FF1B00; margin-bottom: 6px; position: relative; z-index: 10; }
-.contact-card p { font-size: 1.15rem; color: #aaaaaa; margin-bottom: 25px; position: relative; z-index: 10; }
+.contact-card h2 { font-size: 2.3rem; color: #FF1B00; margin-bottom: 6px; position: relative; z-index: 2; }
+.contact-card p { font-size: 1.15rem; color: #aaaaaa; margin-bottom: 25px; position: relative; z-index: 2; }
 
 .contact-form { 
     display: flex; 
     flex-direction: column; 
     gap: 18px; 
     text-align: left; 
-    position: relative; 
-    z-index: 20 !important; 
+    position: relative;
+    z-index: 5;
 }
 
 .form-group { 
     display: flex; 
     flex-direction: column; 
     gap: 6px; 
-    position: relative; 
-    z-index: 25 !important; 
 }
 
 .form-group label { 
@@ -300,7 +302,7 @@ img {
     -ms-user-select: text !important;
     pointer-events: auto !important;
     position: relative;
-    z-index: 30 !important;
+    z-index: 10;
 }
 
 .form-group input::placeholder, .form-group textarea::placeholder { color: #666666; font-size: 1rem; }
@@ -319,7 +321,7 @@ img {
     margin-top: 10px;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
     position: relative;
-    z-index: 30 !important;
+    z-index: 10;
 }
 
 .contact-btn:hover { transform: scale(1.06); background-color: #ff3b1a; box-shadow: 0 0 20px rgba(255, 27, 0, 0.6); }
@@ -334,7 +336,7 @@ img {
     align-items: center;
     gap: 30px;
     position: relative;
-    z-index: 10;
+    z-index: 5;
 }
 
 .social-block {

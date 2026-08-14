@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Chromatic Quest</title>
-    
-    <!-- Pre-carga prioritaria de CSS y Fuente -->
     <link rel="preload" href="assets/Chill-Chrip.otf" as="font" type="font/otf" crossorigin>
-    <link rel="stylesheet" href="./style.css?v=16">
+    <!-- v=18 para forzar actualización del tamaño de la nave -->
+    <link rel="stylesheet" href="./style.css?v=18">
 </head>
 <body>
 
@@ -20,7 +19,7 @@
             <!-- Izquierda: Logo -->
             <div class="header-left">
                 <a href="#" id="site-logo-btn">
-                    <img src="assets/logo.webp" alt="Logo" class="site-logo" fetchpriority="high" width="360" height="auto">
+                    <img src="assets/logo.webp" alt="Logo" class="site-logo" fetchpriority="high">
                 </a>
             </div>
 
@@ -28,7 +27,7 @@
             <div class="header-center">
                 <a href="#" id="site-avatar-btn" class="header-avatar-box">
                     <div class="avatar-glow"></div>
-                    <img src="assets/avatar.webp" alt="Avatar" class="header-avatar" fetchpriority="high" width="210" height="210">
+                    <img src="assets/avatar.webp" alt="Avatar" class="header-avatar" fetchpriority="high">
                 </a>
             </div>
 
@@ -66,7 +65,6 @@
 
             <div class="scroll-feed">
 
-                <!-- Las 2 primeras imágenes cargan inmediato, el resto usa loading="lazy" -->
                 <article class="feed-card">
                     <img src="assets/fliyingkick.webp" alt="Flying Kick" fetchpriority="high" decoding="async">
                     <div class="card-caption">FLYING KICK</div>
@@ -207,7 +205,7 @@
             <div class="contact-card">
                 
                 <div class="contact-image-box">
-                    <img src="assets/logonave.webp" alt="Logo Nave" class="contact-nave-img" loading="lazy" decoding="async">
+                    <img src="assets/logonave.webp" alt="Logo Nave" class="contact-nave-img" decoding="async">
                 </div>
 
                 <h2 id="contact-title">CONTACTO & COMENTARIOS</h2>
@@ -293,9 +291,9 @@
         </button>
     </div>
 
-    <!-- SCRIPTS OPTIMIZADOS -->
+    <!-- SCRIPTS -->
     <script>
-        // Corrección inteligente de extensiones si falla alguna imagen
+        // Corrección inteligente de extensiones si falla alguna imagen (.webp <-> .png <-> .jpg)
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
                 if (!this.dataset.retryIndex) {
