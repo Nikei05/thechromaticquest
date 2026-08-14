@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Chromatic Quest</title>
     <link rel="preload" href="assets/Chill-Chrip.otf" as="font" type="font/otf" crossorigin>
-    <!-- v=18 para forzar actualización del tamaño de la nave -->
-    <link rel="stylesheet" href="./style.css?v=18">
+    <!-- v=25 con Avatar perfectamente centrado y más grande -->
+    <link rel="stylesheet" href="./style.css?v=25">
 </head>
 <body>
 
     <div class="comic-bg-overlay"></div>
 
-    <!-- HEADER SUPERIOR -->
+    <!-- HEADER SUPERIOR ESTILO BARRA HORIZONTAL -->
     <header class="header">
         <div class="header-navbar">
             
@@ -23,22 +23,17 @@
                 </a>
             </div>
 
-            <!-- Centro: Avatar con Glow -->
-            <div class="header-center">
-                <a href="#" id="site-avatar-btn" class="header-avatar-box">
-                    <div class="avatar-glow"></div>
-                    <img src="assets/avatar.webp" alt="Avatar" class="header-avatar" fetchpriority="high">
-                </a>
-            </div>
-
-            <!-- Derecha: Menú e Idioma -->
-            <div class="header-right">
+            <!-- Centro: Menú de Navegación -->
+            <div class="header-center-menu">
                 <nav class="nav-menu">
                     <a href="#" class="nav-link active" data-view="home-view" data-es="INICIO" data-en="HOME">INICIO</a>
                     <a href="#" class="nav-link" data-view="characters-view" data-es="DISEÑO DE PERSONAJES" data-en="CHARACTER DESIGN">DISEÑO DE PERSONAJES</a>
                     <a href="#" class="nav-link" data-view="contact-view" data-es="CONTACTO" data-en="CONTACT">CONTACTO</a>
                 </nav>
+            </div>
 
+            <!-- Derecha: Selector de Idioma -->
+            <div class="header-right">
                 <div class="lang-switch">
                     <button class="lang-btn active" id="lang-es">ES</button>
                     <span class="lang-divider">|</span>
@@ -55,8 +50,18 @@
         <!-- PESTAÑA 1: INICIO -->
         <section id="home-view" class="view-section active">
             
+            <!-- HERO CON AVATAR GIGANTE PERFECTAMENTE CENTRADO -->
             <div class="hero-welcome">
+                
+                <div class="hero-avatar-container">
+                    <a href="#" id="site-avatar-btn" class="main-avatar-box">
+                        <div class="avatar-glow"></div>
+                        <img src="assets/avatar.webp" alt="Avatar Chromatic" class="main-avatar" fetchpriority="high">
+                    </a>
+                </div>
+
                 <h1 class="hero-tagline" id="hero-tagline-text">CREANDO UN MUNDO CROMÁTICO PARA EL NIÑO QUE TODOS LLEVAMOS DENTRO.</h1>
+                
                 <div class="hero-scroll-hint">
                     <span id="scroll-hint-text">EXPLORA LA GALERÍA</span>
                     <div class="arrow-down">↓</div>

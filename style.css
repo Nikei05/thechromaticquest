@@ -40,14 +40,14 @@ img {
     z-index: 0;
 }
 
-/* HEADER & NAVBAR */
+/* HEADER & NAVBAR (DESKTOP) */
 .header {
     background: rgba(5, 5, 5, 0.96);
     backdrop-filter: blur(16px);
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 10px 50px;
+    padding: 12px 40px;
     border-bottom: 2px solid #1f1f1f;
     width: 100%;
 }
@@ -59,42 +59,18 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
-.header-left, .header-right { flex: 1; display: flex; }
+.header-left, .header-right { display: flex; align-items: center; }
 .header-left { justify-content: flex-start; }
-.header-right { align-items: center; justify-content: flex-end; gap: 40px; }
+.header-right { justify-content: flex-end; }
 
 #site-logo-btn { display: block; text-decoration: none; transition: transform 0.25s ease; }
 #site-logo-btn:hover { transform: scale(1.03); filter: drop-shadow(0 0 16px rgba(255, 27, 0, 0.7)); }
-.site-logo { width: 360px; max-width: 100%; height: auto; display: block; }
+.site-logo { width: 320px; max-width: 100%; height: auto; display: block; }
 
-.header-center { display: flex; justify-content: center; align-items: center; }
-
-.header-avatar-box {
-    width: 210px;
-    height: 210px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-}
-.header-avatar-box:hover { transform: scale(1.08); }
-
-.avatar-glow {
-    position: absolute;
-    width: 95%;
-    height: 95%;
-    background: radial-gradient(circle, rgba(255, 27, 0, 0.65) 0%, rgba(0, 0, 0, 0) 70%);
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(22px);
-}
-
-.header-avatar { width: 100%; height: 100%; object-fit: contain; display: block; }
+.header-center-menu { display: flex; justify-content: center; align-items: center; flex: 1; }
 
 /* MENÚ Y IDIOMA */
 .nav-menu { display: flex; align-items: center; gap: 35px; }
@@ -153,6 +129,42 @@ img {
 .lang-btn.active { color: #FF1B00; font-weight: bold; text-shadow: 0 0 12px rgba(255, 27, 0, 0.8); }
 .lang-btn:hover { color: #ffffff; }
 
+/* AVATAR GIGANTE PROTAGÓNICO Y CENTRADO */
+.hero-avatar-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 25px auto !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.main-avatar-box {
+    width: 380px !important;
+    height: 380px !important;
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.main-avatar-box:hover { transform: scale(1.06); }
+
+.avatar-glow {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: radial-gradient(circle, rgba(255, 27, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(32px);
+}
+
+.main-avatar { width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto; }
+
 /* CONTENEDOR VISTAS */
 .main-container {
     width: 100%;
@@ -173,13 +185,17 @@ img {
 
 /* HERO WELCOME */
 .hero-welcome {
-    text-align: center;
-    padding: 20px 10px 40px 10px;
-    margin-bottom: 20px;
+    text-align: center !important;
+    padding: 10px 0 40px 0 !important;
+    margin: 0 auto 20px auto !important;
+    width: 100% !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
 }
 
-.hero-tagline { font-size: 1.35rem; color: #eeeeee; letter-spacing: 1.5px; margin-bottom: 15px; font-weight: normal; }
+.hero-tagline { font-size: 1.35rem; color: #eeeeee; letter-spacing: 1.5px; margin-bottom: 15px; font-weight: normal; text-align: center; }
 .hero-scroll-hint { display: flex; flex-direction: column; align-items: center; gap: 4px; color: #FF1B00; font-size: 0.85rem; letter-spacing: 2px; }
 
 /* GALERÍAS Y TARJETAS */
@@ -228,7 +244,7 @@ img {
     color: #ff4500;
 }
 
-/* CONTACTO CON NAVE GIGANTE ORIGINAL */
+/* CONTACTO */
 .contact-card {
     text-align: center;
     padding: 10px 40px 50px 40px;
@@ -242,14 +258,13 @@ img {
     position: relative;
 }
 
-/* Nave tamaño gigante original con margen negativo sobre el contenedor */
 .contact-image-box { 
     width: 100%; 
     max-width: 780px; 
     margin: -60px auto -180px auto; 
     display: flex; 
     justify-content: center; 
-    pointer-events: none !important; /* Permite clics a través de la nave hacia el input Nombre */
+    pointer-events: none !important; 
 }
 
 .contact-nave-img { 
@@ -580,28 +595,138 @@ img {
     filter: drop-shadow(0 0 16px rgba(255, 27, 0, 1)) drop-shadow(0 0 30px rgba(255, 85, 0, 0.8));
 }
 
-/* RESPONSIVO */
+/* ==========================================================================
+   📱 ADAPTACIÓN RESPONSIVA MÓVIL (MENÚ DESPLAZADO A LA DERECHA Y MÁS GRANDE)
+   ========================================================================== */
+
 @media (max-width: 1100px) {
-    .header { padding: 15px 20px; }
-    .header-navbar { flex-direction: column; gap: 15px; }
-    .header-left, .header-right { justify-content: center; width: 100%; }
-    .header-right { flex-direction: column; gap: 15px; }
-    .site-logo { width: 280px; }
-    .header-avatar-box { width: 150px; height: 150px; }
-    .nav-menu { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .header { padding: 12px 20px; }
+    .header-navbar { gap: 15px; }
+    .site-logo { width: 220px; }
+    .nav-menu { gap: 18px; }
+    .nav-link { font-size: 1rem; }
+    .main-avatar-box { width: 280px !important; height: 280px !important; }
     .character-grid { grid-template-columns: 1fr; }
-    .contact-card { padding: 20px 20px 40px 20px; }
-    .rocket-launcher { width: 100px; bottom: 25px; right: 25px; }
-    .nav-btn svg { width: 45px; height: 45px; }
-    .prev-btn { left: 10px; }
-    .next-btn { right: 10px; }
 }
 
 @media (max-width: 600px) {
-    .site-logo { width: 220px; }
-    .header-avatar-box { width: 120px; height: 120px; }
-    .hero-tagline { font-size: 1rem; }
-    .feed-card { border-width: 2px; border-radius: 12px; }
-    .social-icons { width: 100%; flex-direction: column; }
-    .social-btn { width: 100%; }
+    /* Header Móvil estilo Barra Horizontal */
+    .header { padding: 10px 8px; }
+    
+    .header-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 4px;
+    }
+
+    /* Logo a la izquierda */
+    .header-left { width: auto; flex: none; }
+    .site-logo { width: 85px !important; }
+
+    /* Menú en el centro desplazado un poco a la derecha */
+    .header-center-menu { 
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; /* Desplaza el menú hacia la derecha */
+        align-items: center;
+        margin-right: 6px;
+    }
+    
+    .nav-menu { 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: flex-end; 
+        align-items: center; 
+        gap: 8px !important; 
+    }
+    
+    /* Botones más grandes en celular */
+    .nav-link { 
+        font-size: 0.72rem !important; 
+        letter-spacing: 0.3px !important; 
+        padding-bottom: 2px; 
+        white-space: nowrap; 
+    }
+
+    /* Selector de idioma a la derecha */
+    .header-right { width: auto; flex: none; }
+    .lang-switch { padding: 3px 6px; gap: 3px; border-radius: 12px; }
+    .lang-btn { font-size: 0.70rem; }
+
+    /* AVATAR GIGANTE Y CENTRADO EN CELULAR */
+    .hero-avatar-container { 
+        margin: 10px auto 20px auto !important; 
+        padding: 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .main-avatar-box { 
+        width: 280px !important; 
+        height: 280px !important; 
+        margin: 0 auto !important;
+    }
+    
+    .avatar-glow { filter: blur(28px); }
+
+    /* Hero Móvil Limpio */
+    .main-container { padding: 15px 0 60px 0 !important; }
+    .hero-welcome { padding: 10px 10px 20px 10px !important; margin: 0 auto 15px auto !important; width: 100% !important; }
+    .hero-tagline { font-size: 0.88rem; letter-spacing: 0.5px; line-height: 1.35; margin-bottom: 10px; }
+    .hero-scroll-hint { font-size: 0.75rem; }
+
+    /* Galería y Tarjetas */
+    .scroll-feed { gap: 25px; padding: 0 10px; }
+    .character-grid { gap: 20px; padding: 0 10px; }
+    .feed-card { border-width: 2px; border-radius: 14px; }
+    .card-caption { font-size: 0.88rem; padding: 10px; letter-spacing: 1px; }
+
+    /* Tarjeta de Contacto Móvil */
+    .contact-card { padding: 10px 15px 30px 15px; border-radius: 16px; border-width: 2px; }
+    .contact-image-box { max-width: 100%; margin: -30px auto -80px auto; }
+    .contact-nave-img { transform: scale(1.1); }
+    .contact-card h2 { font-size: 1.35rem; }
+    .contact-card p { font-size: 0.85rem; margin-bottom: 15px; }
+
+    .form-group input, .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+    
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 240px;
+    }
+
+    /* Redes Sociales en Móvil */
+    .social-links-box { margin-top: 25px; padding-top: 18px; gap: 18px; }
+    .social-subtitle { font-size: 0.75rem; text-align: center; }
+    .social-icons { width: 100%; flex-direction: column; gap: 8px; }
+    .social-btn { width: 100%; padding: 10px 16px; font-size: 0.85rem; border-radius: 12px; }
+    .social-icon { width: 20px; height: 20px; }
+
+    /* Footer Legal */
+    .site-footer { margin: 35px auto 15px auto; padding-top: 15px; padding-left: 10px; padding-right: 10px; }
+    .site-footer p { font-size: 0.75rem; line-height: 1.4; }
+
+    /* Nave Flotante Táctil Móvil */
+    .rocket-launcher { width: 65px; bottom: 12px; right: 10px; opacity: 0.85; }
+    .rocket-tooltip { display: none !important; }
+
+    /* Visor Lightbox Móvil */
+    .lightbox { padding: 8px; }
+    .lightbox-img { max-width: 98%; max-height: 80vh; }
+    .close-btn { top: 12px; right: 18px; font-size: 35px; }
+    .nav-btn { padding: 6px; }
+    .nav-btn svg { width: 35px; height: 35px; }
+    .prev-btn { left: 5px; }
+    .next-btn { right: 5px; }
 }
