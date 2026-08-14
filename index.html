@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Chromatic Quest</title>
-    <!-- v=15 para forzar la actualización de los textos de traducción -->
-    <link rel="stylesheet" href="./style.css?v=15">
+    
+    <!-- Pre-carga prioritaria de CSS y Fuente -->
+    <link rel="preload" href="assets/Chill-Chrip.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="./style.css?v=16">
 </head>
 <body>
 
@@ -18,7 +20,7 @@
             <!-- Izquierda: Logo -->
             <div class="header-left">
                 <a href="#" id="site-logo-btn">
-                    <img src="assets/logo.webp" alt="Logo" class="site-logo">
+                    <img src="assets/logo.webp" alt="Logo" class="site-logo" fetchpriority="high" width="360" height="auto">
                 </a>
             </div>
 
@@ -26,7 +28,7 @@
             <div class="header-center">
                 <a href="#" id="site-avatar-btn" class="header-avatar-box">
                     <div class="avatar-glow"></div>
-                    <img src="assets/avatar.webp" alt="Avatar" class="header-avatar">
+                    <img src="assets/avatar.webp" alt="Avatar" class="header-avatar" fetchpriority="high" width="210" height="210">
                 </a>
             </div>
 
@@ -64,93 +66,94 @@
 
             <div class="scroll-feed">
 
+                <!-- Las 2 primeras imágenes cargan inmediato, el resto usa loading="lazy" -->
                 <article class="feed-card">
-                    <img src="assets/fliyingkick.webp" alt="Flying Kick">
+                    <img src="assets/fliyingkick.webp" alt="Flying Kick" fetchpriority="high" decoding="async">
                     <div class="card-caption">FLYING KICK</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/backinblack.webp" alt="Back in Black">
+                    <img src="assets/backinblack.webp" alt="Back in Black" fetchpriority="high" decoding="async">
                     <div class="card-caption">BACK IN BLACK</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/dragon.webp" alt="Dragon">
+                    <img src="assets/dragon.webp" alt="Dragon" loading="lazy" decoding="async">
                     <div class="card-caption">DRAGON</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/escapemonster.webp" alt="Escape Monster">
+                    <img src="assets/escapemonster.webp" alt="Escape Monster" loading="lazy" decoding="async">
                     <div class="card-caption">ESCAPE MONSTER</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/giagiantpower.webp" alt="Gia Giant Power">
+                    <img src="assets/giagiantpower.webp" alt="Gia Giant Power" loading="lazy" decoding="async">
                     <div class="card-caption">GIA GIANT POWER</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/glowingcave.webp" alt="Glowing Cave">
+                    <img src="assets/glowingcave.webp" alt="Glowing Cave" loading="lazy" decoding="async">
                     <div class="card-caption">GLOWING CAVE</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/insectsexplosion.webp" alt="Insects Explosion">
+                    <img src="assets/insectsexplosion.webp" alt="Insects Explosion" loading="lazy" decoding="async">
                     <div class="card-caption">INSECTS EXPLOSION</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/letsdance.webp" alt="Lets Dance">
+                    <img src="assets/letsdance.webp" alt="Lets Dance" loading="lazy" decoding="async">
                     <div class="card-caption">LETS DANCE</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/memories.webp" alt="Memories">
+                    <img src="assets/memories.webp" alt="Memories" loading="lazy" decoding="async">
                     <div class="card-caption">MEMORIES</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/monkeybrothers.webp" alt="Monkey Brothers">
+                    <img src="assets/monkeybrothers.webp" alt="Monkey Brothers" loading="lazy" decoding="async">
                     <div class="card-caption">MONKEY BROTHERS</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/mothqueen.webp" alt="Moth Queen">
+                    <img src="assets/mothqueen.webp" alt="Moth Queen" loading="lazy" decoding="async">
                     <div class="card-caption">MOTH QUEEN</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/redpower.webp" alt="Red Power">
+                    <img src="assets/redpower.webp" alt="Red Power" loading="lazy" decoding="async">
                     <div class="card-caption">RED POWER</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/revolution.webp" alt="Revolution">
+                    <img src="assets/revolution.webp" alt="Revolution" loading="lazy" decoding="async">
                     <div class="card-caption">REVOLUTION</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/sirenssing.webp" alt="Sirens Sing">
+                    <img src="assets/sirenssing.webp" alt="Sirens Sing" loading="lazy" decoding="async">
                     <div class="card-caption">SIRENS SING</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/thecrew.webp" alt="The Crew">
+                    <img src="assets/thecrew.webp" alt="The Crew" loading="lazy" decoding="async">
                     <div class="card-caption">THE CREW</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/theenemieinside.webp" alt="The Enemy Inside">
+                    <img src="assets/theenemieinside.webp" alt="The Enemy Inside" loading="lazy" decoding="async">
                     <div class="card-caption">THE ENEMY INSIDE</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/themechanic.webp" alt="The Mechanic">
+                    <img src="assets/themechanic.webp" alt="The Mechanic" loading="lazy" decoding="async">
                     <div class="card-caption">THE MECHANIC</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/tinwoman.webp" alt="Tin Woman">
+                    <img src="assets/tinwoman.webp" alt="Tin Woman" loading="lazy" decoding="async">
                     <div class="card-caption">TIN WOMAN</div>
                 </article>
 
@@ -162,37 +165,37 @@
             <div class="character-grid">
 
                 <article class="feed-card">
-                    <img src="assets/marmorconcept.webp" alt="Marmor Concept">
+                    <img src="assets/marmorconcept.webp" alt="Marmor Concept" loading="lazy" decoding="async">
                     <div class="card-caption">MARMOR CONCEPT</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/naconcept.webp" alt="Na Concept">
+                    <img src="assets/naconcept.webp" alt="Na Concept" loading="lazy" decoding="async">
                     <div class="card-caption">NA CONCEPT</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/thegrittbronkeys.webp" alt="The Grittbronkeys Concept">
+                    <img src="assets/thegrittbronkeys.webp" alt="The Grittbronkeys Concept" loading="lazy" decoding="async">
                     <div class="card-caption">THE GRITTBRONKEYS</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/themoonliteyes.webp" alt="The Moonlit Eyes Concept">
+                    <img src="assets/themoonliteyes.webp" alt="The Moonlit Eyes Concept" loading="lazy" decoding="async">
                     <div class="card-caption">THE MOONLIT EYES</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/thetinmatron.webp" alt="The Tin Matron Concept">
+                    <img src="assets/thetinmatron.webp" alt="The Tin Matron Concept" loading="lazy" decoding="async">
                     <div class="card-caption">THE TIN MATRON</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/valeriusconcept.webp" alt="Valerius Concept">
+                    <img src="assets/valeriusconcept.webp" alt="Valerius Concept" loading="lazy" decoding="async">
                     <div class="card-caption">VALERIUS CONCEPT</div>
                 </article>
 
                 <article class="feed-card">
-                    <img src="assets/vorekconcept.webp" alt="Vorek Concept">
+                    <img src="assets/vorekconcept.webp" alt="Vorek Concept" loading="lazy" decoding="async">
                     <div class="card-caption">VOREK CONCEPT</div>
                 </article>
 
@@ -204,7 +207,7 @@
             <div class="contact-card">
                 
                 <div class="contact-image-box">
-                    <img src="assets/logonave.webp" alt="Logo Nave" class="contact-nave-img">
+                    <img src="assets/logonave.webp" alt="Logo Nave" class="contact-nave-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2 id="contact-title">CONTACTO & COMENTARIOS</h2>
@@ -230,10 +233,8 @@
                     <button type="submit" class="contact-btn" id="contact-btn-text">ENVIAR MENSAJE</button>
                 </form>
 
-                <!-- CAJA DE REDES SEPARADAS POR TIPO DE CONTENIDO -->
                 <div class="social-links-box">
                     
-                    <!-- BLOQUE 1: INSTAGRAM PROYECTO -->
                     <div class="social-block">
                         <span class="social-subtitle" id="social-title-project">SÍGUEME EN EL INSTAGRAM OFICIAL DEL PROYECTO</span>
                         <div class="social-icons">
@@ -244,7 +245,6 @@
                         </div>
                     </div>
 
-                    <!-- BLOQUE 2: OTROS PROYECTOS (PORTAFOLIOS) -->
                     <div class="social-block">
                         <span class="social-subtitle" id="social-title-personal">EXPLORA OTROS DE MIS PROYECTOS Y TRABAJOS</span>
                         <div class="social-icons">
@@ -275,7 +275,7 @@
     <!-- BOTÓN NAVE DE MARMOR CON LETRERO EN HOVER -->
     <div id="rocket-btn" class="rocket-launcher">
         <span class="rocket-tooltip" id="rocket-tooltip-text">SUBE AL INICIO</span>
-        <img src="assets/botonnave.webp" alt="Nave Marmor Scroll">
+        <img src="assets/botonnave.webp" alt="Nave Marmor Scroll" loading="lazy">
     </div>
 
     <!-- LIGHTBOX CON FLECHAS EN SVG EN ROJO NEÓN -->
@@ -293,9 +293,9 @@
         </button>
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS OPTIMIZADOS -->
     <script>
-        // Corrección inteligente de extensiones si falla alguna imagen (.webp <-> .png <-> .jpg)
+        // Corrección inteligente de extensiones si falla alguna imagen
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
                 if (!this.dataset.retryIndex) {
@@ -352,9 +352,7 @@
                 langEsBtn.classList.add('active'); langEnBtn.classList.remove('active');
                 navLinks.forEach(link => link.textContent = link.dataset.es);
                 
-                // Tagline del Hero
                 document.getElementById('hero-tagline-text').textContent = "CREANDO UN MUNDO CROMÁTICO PARA EL NIÑO QUE TODOS LLEVAMOS DENTRO.";
-                
                 document.getElementById('contact-title').textContent = "CONTACTO & COMENTARIOS";
                 document.getElementById('contact-desc').textContent = "¿Tienes alguna pregunta, proyecto o comentario? ¡Escríbeme!";
                 document.getElementById('contact-btn-text').textContent = "ENVIAR MENSAJE";
@@ -368,7 +366,6 @@
                 document.getElementById('user-message').placeholder = "Escribe tu mensaje aquí...";
                 document.getElementById('scroll-hint-text').textContent = "EXPLORA LA GALERÍA";
                 
-                // Traducción de Títulos de Redes Sociales
                 document.getElementById('social-title-project').textContent = "SÍGUEME EN EL INSTAGRAM OFICIAL DEL PROYECTO";
                 document.getElementById('social-title-personal').textContent = "EXPLORA OTROS DE MIS PROYECTOS Y TRABAJOS";
                 
@@ -380,9 +377,7 @@
                 langEnBtn.classList.add('active'); langEsBtn.classList.remove('active');
                 navLinks.forEach(link => link.textContent = link.dataset.en);
                 
-                // Tagline del Hero (EN)
                 document.getElementById('hero-tagline-text').textContent = "CREATING A CHROMATIC WORLD FOR THE KID IN ALL OF US.";
-                
                 document.getElementById('contact-title').textContent = "CONTACT & COMMENTS";
                 document.getElementById('contact-desc').textContent = "HAVE A QUESTION, PROJECT, OR COMMENT? FEEL FREE TO REACH OUT!";
                 document.getElementById('contact-btn-text').textContent = "SEND MESSAGE";
@@ -396,7 +391,6 @@
                 document.getElementById('user-message').placeholder = "Write your message here...";
                 document.getElementById('scroll-hint-text').textContent = "EXPLORE THE GALLERY";
                 
-                // Traducción de Títulos de Redes Sociales (EN)
                 document.getElementById('social-title-project').textContent = "FOLLOW THE OFFICIAL INSTAGRAM FOR THE PROJECT";
                 document.getElementById('social-title-personal').textContent = "EXPLORE OTHER PROJECTS AND ARTWORK";
                 
@@ -454,7 +448,7 @@
         if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
         if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 
-        // Navegación con teclado (Flecha Izquierda, Flecha Derecha, Escape)
+        // Navegación con teclado
         document.addEventListener('keydown', (e) => {
             if (lightbox && lightbox.classList.contains('show')) {
                 if (e.key === 'ArrowLeft') showPrev();

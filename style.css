@@ -1,7 +1,8 @@
-/* Fuente personalizada */
+/* Fuente personalizada con rendimiento optimizado */
 @font-face {
     font-family: 'ChillChrip';
     src: url('assets/Chill-Chrip.otf') format('opentype');
+    font-display: swap; /* Muestra texto de inmediato mientras descarga la fuente */
 }
 
 /* Reset Global */
@@ -25,6 +26,7 @@ html, body {
 img {
     user-drag: none;
     -webkit-user-drag: none;
+    content-visibility: auto; /* Optimización moderna del motor gráfico */
 }
 
 /* Fondo Halftone / Overlay con resplandor Rojo-Naranja */
@@ -195,6 +197,7 @@ img {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    contain: content; /* Rendimiento mejorado de renderizado */
 }
 
 .feed-card:hover {
@@ -273,7 +276,6 @@ img {
     z-index: 25 !important; 
 }
 
-/* Fuente CÓMIC ChillChrip activa en los títulos del formulario */
 .form-group label { 
     font-family: 'ChillChrip', sans-serif !important; 
     font-size: 1.05rem; 
@@ -281,7 +283,6 @@ img {
     letter-spacing: 1px; 
 }
 
-/* Interacción total en los campos de texto */
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 14px 18px;
@@ -546,7 +547,6 @@ img {
     transform: scale(1.1);
 }
 
-/* Flechas limpias en rojo neón sin borde ni círculo */
 .nav-btn {
     position: absolute;
     top: 50%;
