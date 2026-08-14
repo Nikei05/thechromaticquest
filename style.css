@@ -4,7 +4,7 @@
     src: url('assets/Chill-Chrip.otf') format('opentype');
 }
 
-/* Reset Global & Tipografía Única */
+/* Reset Global */
 * {
     margin: 0;
     padding: 0;
@@ -189,6 +189,8 @@ img { user-drag: none; -webkit-user-drag: none; }
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .feed-card:hover {
@@ -197,20 +199,29 @@ img { user-drag: none; -webkit-user-drag: none; }
     box-shadow: 0 12px 35px rgba(230, 0, 92, 0.35);
 }
 
-.feed-card img { width: 100%; height: auto; display: block; object-fit: contain; }
+.feed-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
+/* Títulos debajo de cada ilustración */
 .card-caption {
-    padding: 12px 20px;
+    padding: 14px 20px;
     background-color: #0d0d0d;
     border-top: 1px solid #222222;
     color: #e6005c;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     letter-spacing: 1.5px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.feed-card:hover .card-caption { background-color: #16030b; color: #ff0066; }
+.feed-card:hover .card-caption {
+    background-color: #16030b;
+    color: #ff0066;
+}
 
 /* CONTACTO */
 .contact-card {
@@ -327,7 +338,7 @@ img { user-drag: none; -webkit-user-drag: none; }
 #legal-copy { color: #ffffff !important; font-weight: 600; }
 #legal-warning { color: #aaaaaa !important; }
 
-/* NAVE FLOTANTE CON RESPLANDOR MAGENTA/CIAN PARA RESALTAR BORDES */
+/* NAVE FLOTANTE DE MARMOR CON CARTEL HOVER */
 .rocket-launcher {
     position: fixed;
     bottom: 35px;
@@ -337,13 +348,11 @@ img { user-drag: none; -webkit-user-drag: none; }
     cursor: pointer;
     z-index: 999;
     transition: filter 0.3s ease;
-    /* Doble resplandor neón magenta/cian para perfilar las líneas de la nave */
     filter: drop-shadow(0 0 8px rgba(230, 0, 92, 0.95)) drop-shadow(0 0 18px rgba(0, 210, 255, 0.5));
     animation: idleFloat 3.5s ease-in-out infinite;
 }
 
 .rocket-launcher:hover { 
-    /* Intensifica el brillo neón al pasar el cursor */
     filter: drop-shadow(0 0 12px rgba(230, 0, 92, 1)) drop-shadow(0 0 25px rgba(0, 210, 255, 0.8)); 
 }
 
@@ -355,7 +364,7 @@ img { user-drag: none; -webkit-user-drag: none; }
     z-index: 2;
 }
 
-/* Cartel con letras blancas nítidas */
+/* Cartelito flotante */
 .rocket-tooltip {
     position: absolute;
     top: -45px;
