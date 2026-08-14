@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Chromatic Quest</title>
-    <!-- v=4 para forzar actualización del diseño de flechas -->
-    <link rel="stylesheet" href="./style.css?v=4">
+    <link rel="stylesheet" href="./style.css?v=5">
 </head>
 <body>
 
@@ -282,11 +281,15 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Auto-corrección de formatos si falla alguna imagen
+        // Sistema Robusto de Corrección de Rutas de Imágenes
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
-                if (this.src.endsWith('.jpg')) this.src = this.src.replace('.jpg', '.png');
-                else if (this.src.endsWith('.png')) this.src = this.src.replace('.png', '.webp');
+                if (!this.dataset.retried) {
+                    this.dataset.retried = '1';
+                    if (this.src.endsWith('.jpg')) this.src = this.src.replace('.jpg', '.png');
+                    else if (this.src.endsWith('.png')) this.src = this.src.replace('.png', '.webp');
+                    else if (this.src.endsWith('.webp')) this.src = this.src.replace('.webp', '.jpg');
+                }
             });
         });
 

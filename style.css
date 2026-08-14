@@ -21,6 +21,14 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Protecciones CSS contra renderizado de texto ALT roto en imágenes */
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
 /* Fondo Halftone / Overlay con resplandor Rojo-Naranja */
 .comic-bg-overlay {
     position: fixed;
@@ -32,8 +40,6 @@ html, body {
     pointer-events: none;
     z-index: 0;
 }
-
-img { user-drag: none; -webkit-user-drag: none; }
 
 /* HEADER & NAVBAR */
 .header {
@@ -204,6 +210,7 @@ img { user-drag: none; -webkit-user-drag: none; }
     height: auto;
     display: block;
     object-fit: contain;
+    background-color: #080808;
 }
 
 /* Títulos debajo de cada ilustración */
