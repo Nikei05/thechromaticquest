@@ -238,18 +238,50 @@ img {
     margin: 0 auto;
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
     overflow: hidden;
+    position: relative;
+    z-index: 5;
 }
 
-.contact-image-box { width: 100%; max-width: 780px; margin: -60px auto -180px auto; display: flex; justify-content: center; }
-.contact-nave-img { width: 100%; height: auto; display: block; transform: scale(1.15); }
+.contact-image-box { 
+    width: 100%; 
+    max-width: 780px; 
+    margin: -60px auto -180px auto; 
+    display: flex; 
+    justify-content: center; 
+    pointer-events: none !important; 
+}
 
-.contact-card h2 { font-size: 2.3rem; color: #FF1B00; margin-bottom: 6px; }
-.contact-card p { font-size: 1.15rem; color: #aaaaaa; margin-bottom: 25px; }
+.contact-nave-img { width: 100%; height: auto; display: block; transform: scale(1.15); pointer-events: none !important; }
 
-.contact-form { display: flex; flex-direction: column; gap: 18px; text-align: left; }
-.form-group { display: flex; flex-direction: column; gap: 6px; }
-.form-group label { font-size: 1.05rem; color: #dddddd; letter-spacing: 1px; }
+.contact-card h2 { font-size: 2.3rem; color: #FF1B00; margin-bottom: 6px; position: relative; z-index: 10; }
+.contact-card p { font-size: 1.15rem; color: #aaaaaa; margin-bottom: 25px; position: relative; z-index: 10; }
 
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 18px; 
+    text-align: left; 
+    position: relative; 
+    z-index: 20 !important; 
+}
+
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+    position: relative; 
+    z-index: 25 !important; 
+}
+
+/* Fuente CÓMIC ChillChrip activa en los títulos del formulario */
+.form-group label { 
+    font-family: 'ChillChrip', sans-serif !important; 
+    font-size: 1.05rem; 
+    color: #dddddd; 
+    letter-spacing: 1px; 
+}
+
+/* Interacción total en los campos de texto */
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 14px 18px;
@@ -261,6 +293,13 @@ img {
     letter-spacing: 1px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 30 !important;
 }
 
 .form-group input::placeholder, .form-group textarea::placeholder { color: #666666; font-size: 1rem; }
@@ -278,11 +317,13 @@ img {
     cursor: pointer;
     margin-top: 10px;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    z-index: 30 !important;
 }
 
 .contact-btn:hover { transform: scale(1.06); background-color: #ff3b1a; box-shadow: 0 0 20px rgba(255, 27, 0, 0.6); }
 
-/* REDES SOCIALES CON GLOW ROJO-NARANJA */
+/* REDES SOCIALES ESTRUCTURADAS */
 .social-links-box {
     margin-top: 45px;
     padding-top: 30px;
@@ -290,7 +331,24 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.social-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+.social-subtitle {
+    font-size: 0.95rem;
+    color: #aaaaaa;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .social-icons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
