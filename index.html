@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chromatic Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fondo de Trama / Halftone Cómic -->
+    <div class="comic-bg-overlay"></div>
+
+    <!-- Header Navegación Superior -->
+    <header class="header">
+        <div class="header-navbar">
+            
+            <!-- Izquierda: Logo Clickeable -->
+            <div class="header-left">
+                <a href="#" id="site-logo-btn">
+                    <img src="assets/logo.png" alt="The Chromatic Quest Logo" class="site-logo">
+                </a>
+            </div>
+
+            <!-- Centro: Avatar con Resplandor -->
+            <div class="header-center">
+                <div class="header-avatar-box">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/avatar.png" alt="Character Avatar" class="header-avatar">
+                </div>
+            </div>
+
+            <!-- Derecha: Menú de Navegación Limpio + Switch de Idioma -->
+            <div class="header-right">
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link active" data-view="home-view" data-es="INICIO" data-en="HOME">INICIO</a>
+                    <a href="#" class="nav-link" data-view="characters-view" data-es="DISEÑO DE PERSONAJES" data-en="CHARACTER DESIGN">DISEÑO DE PERSONAJES</a>
+                    <a href="#" class="nav-link" data-view="contact-view" data-es="CONTACTO" data-en="CONTACT">CONTACTO</a>
+                </nav>
+
+                <!-- Botón Switch de Idioma (ES | EN) -->
+                <div class="lang-switch">
+                    <button class="lang-btn active" id="lang-es">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" id="lang-en">EN</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Contenedor Principal de Scroll -->
+    <main class="main-container">
+
+        <!-- PESTAÑA 1: INICIO / HOME -->
+        <section id="home-view" class="view-section active">
+            
+            <!-- Hero Banner de Bienvenida -->
+            <div class="hero-welcome">
+                <h1 class="hero-tagline" id="hero-tagline-text">CREATING A CHROMATIC WORLD FOR THE KID IN ALL OF US.</h1>
+                <div class="hero-scroll-hint">
+                    <span id="scroll-hint-text">EXPLORA LA GALERÍA</span>
+                    <div class="arrow-down">↓</div>
+                </div>
+            </div>
+
+            <div class="scroll-feed">
+                <article class="feed-card">
+                    <img src="assets/fliyingkick.jpg" alt="Flying Kick">
+                    <div class="card-caption">FLYING KICK</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/backinblack.jpg" alt="Back in Black">
+                    <div class="card-caption">BACK IN BLACK</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/dragon.jpg" alt="Dragon">
+                    <div class="card-caption">DRAGON</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/escapemonster.jpg" alt="Escape Monster">
+                    <div class="card-caption">ESCAPE MONSTER</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/giagiantpower.jpg" alt="Gia Giant Power">
+                    <div class="card-caption">GIA GIANT POWER</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/glowingcave.jpg" alt="Glowing Cave">
+                    <div class="card-caption">GLOWING CAVE</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/insectsexplosion.jpg" alt="Insects Explosion">
+                    <div class="card-caption">INSECTS EXPLOSION</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/letsdance.jpg" alt="Lets Dance">
+                    <div class="card-caption">LETS DANCE</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/memories.jpg" alt="Memories">
+                    <div class="card-caption">MEMORIES</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/monkeybrothers.jpg" alt="Monkey Brothers">
+                    <div class="card-caption">MONKEY BROTHERS</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/mothqueen.jpg" alt="Moth Queen">
+                    <div class="card-caption">MOTH QUEEN</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/redpower.jpg" alt="Red Power">
+                    <div class="card-caption">RED POWER</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/revolution.jpg" alt="Revolution">
+                    <div class="card-caption">REVOLUTION</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/sirenssing.jpg" alt="Sirens Sing">
+                    <div class="card-caption">SIRENS SING</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/thecrew.jpg" alt="The Crew">
+                    <div class="card-caption">THE CREW</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/theenemieinside.jpg" alt="The Enemy Inside">
+                    <div class="card-caption">THE ENEMY INSIDE</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/themechanic.jpg" alt="The Mechanic">
+                    <div class="card-caption">THE MECHANIC</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/tinwoman.jpg" alt="Tin Woman">
+                    <div class="card-caption">TIN WOMAN</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 2: DISEÑO DE PERSONAJES (Rejilla de 2 Columnas) -->
+        <section id="characters-view" class="view-section">
+            <div class="character-grid">
+                <article class="feed-card">
+                    <img src="assets/marmorconcept.jpg" alt="Marmor Concept">
+                    <div class="card-caption">MARMOR CONCEPT</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/naconcept.jpg" alt="Na Concept">
+                    <div class="card-caption">NA CONCEPT</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/thegrittbronkeys.jpg" alt="The Grittbronkeys Concept">
+                    <div class="card-caption">THE GRITTBRONKEYS</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/themoonliteyes.jpg" alt="The Moonlit Eyes Concept">
+                    <div class="card-caption">THE MOONLIT EYES</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/thetinmatron.jpg" alt="The Tin Matron Concept">
+                    <div class="card-caption">THE TIN MATRON</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/valeriusconcept.jpg" alt="Valerius Concept">
+                    <div class="card-caption">VALERIUS CONCEPT</div>
+                </article>
+                <article class="feed-card">
+                    <img src="assets/vorekconcept.jpg" alt="Vorek Concept">
+                    <div class="card-caption">VOREK CONCEPT</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 3: CONTACTO Y COMENTARIOS -->
+        <section id="contact-view" class="view-section">
+            <div class="contact-card">
+                
+                <!-- Imagen logonave -->
+                <div class="contact-image-box">
+                    <img src="assets/logonave.png" alt="Logo Nave" class="contact-nave-img" onerror="this.onerror=null; this.src='assets/logonave.jpg';">
+                </div>
+
+                <h2 id="contact-title">CONTACTO & COMENTARIOS</h2>
+                <p id="contact-desc">¿Tienes alguna pregunta, proyecto o comentario? ¡Escríbeme!</p>
+
+                <!-- Formulario vinculado directamente a Gmail -->
+                <form action="https://formspree.io/f/nicolas.osorio.marmor@gmail.com" method="POST" class="contact-form" id="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="user-name" id="label-name">NOMBRE:</label>
+                        <input type="text" id="user-name" name="name" placeholder="Tu nombre..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-email" id="label-email">CORREO ELECTRÓNICO:</label>
+                        <input type="email" id="user-email" name="email" placeholder="tu@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-message" id="label-message">MENSAJE O COMENTARIO:</label>
+                        <textarea id="user-message" name="message" rows="5" placeholder="Escribe tu mensaje o comentario aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-btn" id="contact-btn-text">ENVIAR MENSAJE</button>
+                </form>
+
+                <!-- Redes Sociales en Contacto -->
+                <div class="social-links-box">
+                    <span id="social-title">SÍGUEME EN MIS REDES:</span>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+                        <a href="https://artstation.com" target="_blank" rel="noopener">ARTSTATION</a>
+                        <a href="https://behance.net" target="_blank" rel="noopener">BEHANCE</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal / Visor de Imagen Completa -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen Ampliada">
+        <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Nicolas Osorio Marmor - The Chromatic Quest</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // 1. Cambio de Vistas
+        const navLinks = document.querySelectorAll('.nav-link');
+        const viewSections = document.querySelectorAll('.view-section');
+        const siteLogoBtn = document.getElementById('site-logo-btn');
+
+        function switchView(targetViewId) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            viewSections.forEach(s => s.classList.remove('active'));
+
+            const activeLink = document.querySelector(`[data-view="${targetViewId}"]`);
+            const targetSection = document.getElementById(targetViewId);
+
+            if (activeLink) activeLink.classList.add('active');
+            
+            if (targetSection) {
+                targetSection.style.animation = 'none';
+                targetSection.offsetHeight; // Reflow
+                targetSection.style.animation = '';
+                targetSection.classList.add('active');
+            }
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchView(link.dataset.view);
+            });
+        });
+
+        siteLogoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchView('home-view');
+        });
+
+        // 2. Switch de Idioma Completo
+        const langEsBtn = document.getElementById('lang-es');
+        const langEnBtn = document.getElementById('lang-en');
+        const contactTitle = document.getElementById('contact-title');
+        const contactDesc = document.getElementById('contact-desc');
+        const contactBtnText = document.getElementById('contact-btn-text');
+        const labelName = document.getElementById('label-name');
+        const labelEmail = document.getElementById('label-email');
+        const labelMessage = document.getElementById('label-message');
+        const scrollHintText = document.getElementById('scroll-hint-text');
+        const socialTitle = document.getElementById('social-title');
+        
+        const userNameInput = document.getElementById('user-name');
+        const userEmailInput = document.getElementById('user-email');
+        const userMessageInput = document.getElementById('user-message');
+
+        function setLanguage(lang) {
+            if (lang === 'es') {
+                langEsBtn.classList.add('active');
+                langEnBtn.classList.remove('active');
+
+                navLinks.forEach(link => link.textContent = link.dataset.es);
+                contactTitle.textContent = "CONTACTO & COMENTARIOS";
+                contactDesc.textContent = "¿Tienes alguna pregunta, proyecto o comentario? ¡Escríbeme!";
+                contactBtnText.textContent = "ENVIAR MENSAJE";
+                
+                labelName.textContent = "NOMBRE:";
+                labelEmail.textContent = "CORREO ELECTRÓNICO:";
+                labelMessage.textContent = "MENSAJE O COMENTARIO:";
+
+                userNameInput.placeholder = "Tu nombre...";
+                userEmailInput.placeholder = "tu@correo.com";
+                userMessageInput.placeholder = "Escribe tu mensaje o comentario aquí...";
+
+                scrollHintText.textContent = "EXPLORA LA GALERÍA";
+                socialTitle.textContent = "SÍGUEME EN MIS REDES:";
+            } else {
+                langEnBtn.classList.add('active');
+                langEsBtn.classList.remove('active');
+
+                navLinks.forEach(link => link.textContent = link.dataset.en);
+                contactTitle.textContent = "CONTACT & COMMENTS";
+                contactDesc.textContent = "HAVE A QUESTION, PROJECT, OR COMMENT? FEEL FREE TO REACH OUT!";
+                contactBtnText.textContent = "SEND MESSAGE";
+                
+                labelName.textContent = "NAME:";
+                labelEmail.textContent = "EMAIL ADDRESS:";
+                labelMessage.textContent = "MESSAGE OR COMMENT:";
+
+                userNameInput.placeholder = "Your name...";
+                userEmailInput.placeholder = "you@email.com";
+                userMessageInput.placeholder = "Write your message or comment here...";
+
+                scrollHintText.textContent = "EXPLORE THE GALLERY";
+                socialTitle.textContent = "FOLLOW ME ON SOCIALS:";
+            }
+        }
+
+        langEsBtn.addEventListener('click', () => setLanguage('es'));
+        langEnBtn.addEventListener('click', () => setLanguage('en'));
+
+        // 3. Visor Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        let currentGalleryImages = [];
+        let currentIndex = 0;
+
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG' && e.target.closest('.feed-card')) {
+                const activeSection = document.querySelector('.view-section.active');
+                currentGalleryImages = Array.from(activeSection.querySelectorAll('.feed-card img'));
+                currentIndex = currentGalleryImages.indexOf(e.target);
+                
+                showImage(currentIndex);
+                lightbox.classList.add('show');
+            }
+        });
+
+        function showImage(index) {
+            if (currentGalleryImages.length === 0) return;
+            lightboxImg.style.animation = 'none';
+            lightboxImg.offsetHeight;
+            lightboxImg.src = currentGalleryImages[index].src;
+            lightboxImg.style.animation = 'popIn 0.3s ease forwards';
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            showImage(currentIndex);
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % currentGalleryImages.length;
+            showImage(currentIndex);
+        }
+
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+        function closeLightbox() { lightbox.classList.remove('show'); }
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('show')) {
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+
+        // Protecciones Anti-Guardado
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('dragstart', (e) => e.preventDefault());
+    </script>
+
+</body>
+</html>
