@@ -22,12 +22,12 @@
                 </a>
             </div>
 
-            <!-- Centro: Avatar con Resplandor -->
+            <!-- Centro: Avatar Clickeable con Resplandor -->
             <div class="header-center">
-                <div class="header-avatar-box">
+                <a href="#" id="site-avatar-btn" class="header-avatar-box">
                     <div class="avatar-glow"></div>
                     <img src="assets/avatar.webp" alt="Character Avatar" class="header-avatar" fetchpriority="high">
-                </div>
+                </a>
             </div>
 
             <!-- Derecha: Menú de Navegación Limpio + Switch de Idioma -->
@@ -239,17 +239,19 @@
         <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer con Textos Legales Permanentes -->
     <footer class="footer">
-        <p>&copy; Nicolas Osorio Marmor - The Chromatic Quest</p>
+        <p id="legal-copyright">&copy; 2025 The Chromatic Quest. Todos los derechos reservados.</p>
+        <p id="legal-warning">Queda prohibida la reproducción total o parcial de los contenidos, imágenes o ilustraciones de este sitio sin autorización previa por escrito de su autor, Nicolás Osorio Marmor.</p>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // 1. Cambio de Vistas
+        // 1. Cambio de Vistas (Logo, Avatar y Links de Menú)
         const navLinks = document.querySelectorAll('.nav-link');
         const viewSections = document.querySelectorAll('.view-section');
         const siteLogoBtn = document.getElementById('site-logo-btn');
+        const siteAvatarBtn = document.getElementById('site-avatar-btn');
 
         function switchView(targetViewId) {
             navLinks.forEach(l => l.classList.remove('active'));
@@ -285,7 +287,12 @@
             switchView('home-view');
         });
 
-        // 2. Switch de Idioma Completo
+        siteAvatarBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchView('home-view');
+        });
+
+        // 2. Switch de Idioma Completo (Incluye Legales del Footer)
         const langEsBtn = document.getElementById('lang-es');
         const langEnBtn = document.getElementById('lang-en');
         const contactTitle = document.getElementById('contact-title');
@@ -296,6 +303,8 @@
         const labelMessage = document.getElementById('label-message');
         const scrollHintText = document.getElementById('scroll-hint-text');
         const socialTitle = document.getElementById('social-title');
+        const legalCopyright = document.getElementById('legal-copyright');
+        const legalWarning = document.getElementById('legal-warning');
         
         const userNameInput = document.getElementById('user-name');
         const userEmailInput = document.getElementById('user-email');
@@ -321,6 +330,9 @@
 
                 scrollHintText.textContent = "EXPLORA LA GALERÍA";
                 socialTitle.textContent = "SÍGUEME EN MIS REDES:";
+
+                legalCopyright.textContent = "© 2025 The Chromatic Quest. Todos los derechos reservados.";
+                legalWarning.textContent = "Queda prohibida la reproducción total o parcial de los contenidos, imágenes o ilustraciones de este sitio sin autorización previa por escrito de su autor, Nicolás Osorio Marmor.";
             } else {
                 langEnBtn.classList.add('active');
                 langEsBtn.classList.remove('active');
@@ -340,6 +352,9 @@
 
                 scrollHintText.textContent = "EXPLORE THE GALLERY";
                 socialTitle.textContent = "FOLLOW ME ON SOCIALS:";
+
+                legalCopyright.textContent = "© 2025 The Chromatic Quest. All rights reserved.";
+                legalWarning.textContent = "Total or partial reproduction of the contents, images, or illustrations on this site is strictly prohibited without prior written permission from its author, Nicolás Osorio Marmor.";
             }
         }
 
