@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Chromatic Quest</title>
-    <link rel="stylesheet" href="./style.css?v=5">
+    <!-- v=6 para forzar a que el navegador vuelva a mostrar todas las imágenes -->
+    <link rel="stylesheet" href="./style.css?v=6">
 </head>
 <body>
 
@@ -264,7 +265,7 @@
         <img src="assets/botonnave.webp" alt="Nave Marmor Scroll">
     </div>
 
-    <!-- LIGHTBOX (VISOR A PANTALLA COMPLETA CON FLECHAS ESTILIZADAS EN SVG) -->
+    <!-- LIGHTBOX CON FLECHAS EN SVG EN ROJO NEÓN -->
     <div id="lightbox" class="lightbox">
         <span class="close-btn">&times;</span>
         
@@ -281,14 +282,13 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Sistema Robusto de Corrección de Rutas de Imágenes
+        // Corrección limpia de formatos de imagen sin ocultar elementos
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
-                if (!this.dataset.retried) {
-                    this.dataset.retried = '1';
+                if (!this.dataset.triedPng) {
+                    this.dataset.triedPng = 'true';
                     if (this.src.endsWith('.jpg')) this.src = this.src.replace('.jpg', '.png');
                     else if (this.src.endsWith('.png')) this.src = this.src.replace('.png', '.webp');
-                    else if (this.src.endsWith('.webp')) this.src = this.src.replace('.webp', '.jpg');
                 }
             });
         });

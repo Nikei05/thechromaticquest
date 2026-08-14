@@ -21,12 +21,10 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Protecciones CSS contra renderizado de texto ALT roto en imágenes */
+/* Estilo general para imágenes */
 img {
     user-drag: none;
     -webkit-user-drag: none;
-    font-size: 0 !important;
-    color: transparent !important;
 }
 
 /* Fondo Halftone / Overlay con resplandor Rojo-Naranja */
@@ -210,7 +208,6 @@ img {
     height: auto;
     display: block;
     object-fit: contain;
-    background-color: #080808;
 }
 
 /* Títulos debajo de cada ilustración */
