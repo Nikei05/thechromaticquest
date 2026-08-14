@@ -18,7 +18,7 @@
             <!-- Izquierda: Logo Clickeable -->
             <div class="header-left">
                 <a href="#" id="site-logo-btn">
-                    <img src="assets/logo.webp" alt="The Chromatic Quest Logo" class="site-logo">
+                    <img src="assets/logo.webp" alt="The Chromatic Quest Logo" class="site-logo" fetchpriority="high">
                 </a>
             </div>
 
@@ -26,7 +26,7 @@
             <div class="header-center">
                 <div class="header-avatar-box">
                     <div class="avatar-glow"></div>
-                    <img src="assets/avatar.webp" alt="Character Avatar" class="header-avatar">
+                    <img src="assets/avatar.webp" alt="Character Avatar" class="header-avatar" fetchpriority="high">
                 </div>
             </div>
 
@@ -65,76 +65,77 @@
             </div>
 
             <div class="scroll-feed">
+                <!-- La primera imagen carga con prioridad alta, el resto con Lazy Loading -->
                 <article class="feed-card">
-                    <img src="assets/fliyingkick.webp" alt="Flying Kick">
+                    <img src="assets/fliyingkick.webp" alt="Flying Kick" fetchpriority="high" decoding="async">
                     <div class="card-caption">FLYING KICK</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/backinblack.webp" alt="Back in Black">
+                    <img src="assets/backinblack.webp" alt="Back in Black" loading="lazy" decoding="async">
                     <div class="card-caption">BACK IN BLACK</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/dragon.webp" alt="Dragon">
+                    <img src="assets/dragon.webp" alt="Dragon" loading="lazy" decoding="async">
                     <div class="card-caption">DRAGON</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/escapemonster.webp" alt="Escape Monster">
+                    <img src="assets/escapemonster.webp" alt="Escape Monster" loading="lazy" decoding="async">
                     <div class="card-caption">ESCAPE MONSTER</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/giagiantpower.webp" alt="Gia Giant Power">
+                    <img src="assets/giagiantpower.webp" alt="Gia Giant Power" loading="lazy" decoding="async">
                     <div class="card-caption">GIA GIANT POWER</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/glowingcave.webp" alt="Glowing Cave">
+                    <img src="assets/glowingcave.webp" alt="Glowing Cave" loading="lazy" decoding="async">
                     <div class="card-caption">GLOWING CAVE</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/insectsexplosion.webp" alt="Insects Explosion">
+                    <img src="assets/insectsexplosion.webp" alt="Insects Explosion" loading="lazy" decoding="async">
                     <div class="card-caption">INSECTS EXPLOSION</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/letsdance.webp" alt="Lets Dance">
+                    <img src="assets/letsdance.webp" alt="Lets Dance" loading="lazy" decoding="async">
                     <div class="card-caption">LETS DANCE</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/memories.webp" alt="Memories">
+                    <img src="assets/memories.webp" alt="Memories" loading="lazy" decoding="async">
                     <div class="card-caption">MEMORIES</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/monkeybrothers.webp" alt="Monkey Brothers">
+                    <img src="assets/monkeybrothers.webp" alt="Monkey Brothers" loading="lazy" decoding="async">
                     <div class="card-caption">MONKEY BROTHERS</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/mothqueen.webp" alt="Moth Queen">
+                    <img src="assets/mothqueen.webp" alt="Moth Queen" loading="lazy" decoding="async">
                     <div class="card-caption">MOTH QUEEN</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/redpower.webp" alt="Red Power">
+                    <img src="assets/redpower.webp" alt="Red Power" loading="lazy" decoding="async">
                     <div class="card-caption">RED POWER</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/revolution.webp" alt="Revolution">
+                    <img src="assets/revolution.webp" alt="Revolution" loading="lazy" decoding="async">
                     <div class="card-caption">REVOLUTION</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/sirenssing.webp" alt="Sirens Sing">
+                    <img src="assets/sirenssing.webp" alt="Sirens Sing" loading="lazy" decoding="async">
                     <div class="card-caption">SIRENS SING</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/thecrew.webp" alt="The Crew">
+                    <img src="assets/thecrew.webp" alt="The Crew" loading="lazy" decoding="async">
                     <div class="card-caption">THE CREW</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/theenemieinside.webp" alt="The Enemy Inside">
+                    <img src="assets/theenemieinside.webp" alt="The Enemy Inside" loading="lazy" decoding="async">
                     <div class="card-caption">THE ENEMY INSIDE</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/themechanic.webp" alt="The Mechanic">
+                    <img src="assets/themechanic.webp" alt="The Mechanic" loading="lazy" decoding="async">
                     <div class="card-caption">THE MECHANIC</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/tinwoman.webp" alt="Tin Woman">
+                    <img src="assets/tinwoman.webp" alt="Tin Woman" loading="lazy" decoding="async">
                     <div class="card-caption">TIN WOMAN</div>
                 </article>
             </div>
@@ -144,31 +145,31 @@
         <section id="characters-view" class="view-section">
             <div class="character-grid">
                 <article class="feed-card">
-                    <img src="assets/marmorconcept.webp" alt="Marmor Concept">
+                    <img src="assets/marmorconcept.webp" alt="Marmor Concept" loading="lazy" decoding="async">
                     <div class="card-caption">MARMOR CONCEPT</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/naconcept.webp" alt="Na Concept">
+                    <img src="assets/naconcept.webp" alt="Na Concept" loading="lazy" decoding="async">
                     <div class="card-caption">NA CONCEPT</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/thegrittbronkeys.webp" alt="The Grittbronkeys Concept">
+                    <img src="assets/thegrittbronkeys.webp" alt="The Grittbronkeys Concept" loading="lazy" decoding="async">
                     <div class="card-caption">THE GRITTBRONKEYS</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/themoonliteyes.webp" alt="The Moonlit Eyes Concept">
+                    <img src="assets/themoonliteyes.webp" alt="The Moonlit Eyes Concept" loading="lazy" decoding="async">
                     <div class="card-caption">THE MOONLIT EYES</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/thetinmatron.webp" alt="The Tin Matron Concept">
+                    <img src="assets/thetinmatron.webp" alt="The Tin Matron Concept" loading="lazy" decoding="async">
                     <div class="card-caption">THE TIN MATRON</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/valeriusconcept.webp" alt="Valerius Concept">
+                    <img src="assets/valeriusconcept.webp" alt="Valerius Concept" loading="lazy" decoding="async">
                     <div class="card-caption">VALERIUS CONCEPT</div>
                 </article>
                 <article class="feed-card">
-                    <img src="assets/vorekconcept.webp" alt="Vorek Concept">
+                    <img src="assets/vorekconcept.webp" alt="Vorek Concept" loading="lazy" decoding="async">
                     <div class="card-caption">VOREK CONCEPT</div>
                 </article>
             </div>
@@ -180,7 +181,7 @@
                 
                 <!-- Imagen logonave -->
                 <div class="contact-image-box">
-                    <img src="assets/logonave.webp" alt="Logo Nave" class="contact-nave-img">
+                    <img src="assets/logonave.webp" alt="Logo Nave" class="contact-nave-img" loading="lazy" decoding="async">
                 </div>
 
                 <h2 id="contact-title">CONTACTO & COMENTARIOS</h2>
